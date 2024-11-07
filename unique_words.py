@@ -1,0 +1,16 @@
+#PROGRAMMING EXERCISE 9-4
+#WRITE A PROGRAM THAT OPENS A SPECIFIED TEXT FILE
+#THEN DISPLAYS A LIST OF ALL THE UNIQUE WORDS FOUND IN THE FILE
+#HINT STORE EACH WORD AS AN ELEMENT OF A SET
+
+# OPEN 'FILE1.TEXT'(used in another exercise) AND READ
+with open('file1.txt', 'r') as file1:
+     contents = file1.read()  #STORE CONTENTS TO OWN VARIABLE
+
+# SPLIT CONTENTS INTO WORDS AND STORE INTO A SET
+words= set(contents.split())
+
+# DISPLAY RESULTS
+print("UNIQUE WORDS FOUND:")
+for word in words:
+    print(word)
